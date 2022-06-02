@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomProfileUser">
+        <attr name="text_name_user" format="string"/>
+        <attr name="img_profile" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomInputKeyboard">
+        <attr name="hint_edt" format="string"/>
+        <attr name="icon_keyboard" format="reference"/>
+    </declare-styleable>
+
+</resources>
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "956091515067",
+    "project_id": "app-message-8d59b",
+    "storage_bucket": "app-message-8d59b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956091515067:android:929408133952d7faefa99e",
+        "android_client_info": {
+          "package_name": "br.com.jpstudent.appmessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956091515067-cpg2qhdo9b5gjdnq87khaoh1jknv9ppi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBha_sJUzHJ4J-rwZ3pdEPdyI0A8aX_3so"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956091515067-cpg2qhdo9b5gjdnq87khaoh1jknv9ppi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
