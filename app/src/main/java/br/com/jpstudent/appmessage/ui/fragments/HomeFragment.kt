@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val user by lazy { arguments?.getSerializable(USER) as User }
-    private val adapter by lazy { ProfileUserAdapter() }
+    private val adapter by lazy { ProfileUserAdapter(user.id) }
     private val viewModel: HomeViewModel by viewModel {
         parametersOf(user)
     }

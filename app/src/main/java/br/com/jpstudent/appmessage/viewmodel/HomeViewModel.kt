@@ -22,6 +22,12 @@ class HomeViewModel(
     val alertDialogDeletePostLiveData = MutableLiveData<Post>()
     val deletePostLiveData = MutableLiveData<String>()
 
+    init {
+        nameUserLiveData.value = user.name.split(" ")[0]
+        getPosts()
+
+    }
+
     private fun getPosts() {
         getPostsUseCase.getPosts(
             object : OnResultListner<List<Post>> {
@@ -89,10 +95,6 @@ class HomeViewModel(
 
 
 
-    init {
-        nameUserLiveData.value = user.name.split(" ")[0]
-        getPosts()
 
-    }
 
 }

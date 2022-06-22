@@ -4,5 +4,6 @@ data class Post(
     var id : String? = null,
     val idUser: String = "",
     val nameUser : String = "",
-    val text: String = ""
+    val text: String = "",
+    var isMyPost : Boolean = false
 )

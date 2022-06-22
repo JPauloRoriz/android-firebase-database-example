@@ -17,54 +17,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:text_name_user="Usuário" />
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_posts"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:cardElevation="6dp"
-        app:cardUseCompatPadding="true"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        android:orientation="vertical"
+        tools:itemCount="10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/input_layout_post"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_profile"
+        app:layout_constraintVertical_bias="1"
+        tools:listitem="@layout/item_user_posts" />
 
-        app:layout_constraintTop_toBottomOf="@+id/img_profile">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_posts"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:listitem="@layout/item_user_posts" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
-
-
-    </androidx.cardview.widget.CardView>
-
-  <br.com.jpstudent.appmessage.ui.component.CustomInputKeyboard
-      android:id="@+id/input_layout_post"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:icon_keyboard="@drawable/ic_baseline_send_24"
-      app:hint_edt="Digite seu post"
-      android:layout_marginVertical="5dp"/>
-
+    <br.com.jpstudent.appmessage.ui.component.CustomInputKeyboard
+        android:id="@+id/input_layout_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        app:hint_edt="Digite seu post"
+        app:icon_keyboard="@drawable/ic_baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

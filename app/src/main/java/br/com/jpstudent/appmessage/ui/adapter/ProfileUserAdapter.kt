@@ -1,55 +1,57 @@
 package br.com.jpstudent.appmessage.ui.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.jpstudent.appmessage.R
 import br.com.jpstudent.appmessage.model.entity.Post
-import br.com.jpstudent.appmessage.model.entity.User
-import br.com.jpstudent.appmessage.ui.component.CustomProfileUser
+import br.com.jpstudent.appmessage.ui.adapter.viewholder.OwnPostsViewHolder
+import br.com.jpstudent.appmessage.ui.adapter.viewholder.UserPostsViewHolder
 
-class ProfileUserAdapter() :
-    RecyclerView.Adapter<ProfileUserAdapter.ProfileUserViewHolder>() {
+class ProfileUserAdapter(
+    private val idUser: String?
+) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var posts: List<Post> = mutableListOf()
     var clickText: ((Post) -> Unit)? = null
     var clickProfile: ((String) -> Unit)? = null
-
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileUserViewHolder {
-        return ProfileUserViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_user_posts, parent, false)
-        )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return if (viewType == USERSPOSTS) {
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.item_user_posts, parent, false)
+            UserPostsViewHolder(view)
+        } else {
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.item_own_post, parent, false)
+            OwnPostsViewHolder(view)
+        }
     }
 
-    override fun onBindViewHolder(holder: ProfileUserViewHolder, position: Int) {
-        holder.binding(posts[position])
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (getItemViewType(position) == USERSPOSTS) {
+            (holder as? (UserPostsViewHolder))?.bind(posts[position], clickText, clickProfile)
+        } else {
+            (holder as? (OwnPostsViewHolder))?.bind(posts[position], clickText, clickProfile)
+        }
     }
 
-    override fun getItemCount() = posts.size
+    override fun getItemCount(): Int {
+        return posts.size
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if (posts[position].idUser == idUser) OWNPOSTS else USERSPOSTS
+    }
 
     fun refreshList(posts: List<Post>) {
         this.posts = posts
         notifyDataSetChanged()
     }
 
-
-    inner class ProfileUserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val tvMessagePost: TextView by lazy { itemView.findViewById(R.id.tv_message_post) }
-        private val profile: CustomProfileUser by lazy { itemView.findViewById(R.id.profile) }
-
-        fun binding(post: Post) {
-
-            tvMessagePost.text = post.text
-            profile.textNameUser = post.nameUser
-
-            tvMessagePost.setOnClickListener {
-                clickText?.invoke(post)
-            }
-            profile.setOnClickListener {
-                clickProfile?.invoke(post.idUser)
-            }
-        }
+    companion object {
+        private const val USERSPOSTS = 0
+        private const val OWNPOSTS = 1
     }
+
+
 }

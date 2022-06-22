@@ -23,6 +23,18 @@
         <entry key="..\:/Users/joaop/AndroidStudioProjects/AppMessage/app/src/main/res/layout/item_user_posts.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/joaop/AndroidStudioProjects/AppMessage/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.109" />
         <entry key="..\:/Users/joaop/AndroidStudioProjects/AppMessage/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.109" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.104" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/drawable/shape_badge_end.xml" value="0.104" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/drawable/shape_badge_start.xml" value="0.104" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/custom_input_keyboard.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/custom_profile_user.xml" value="0.33" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/fragment_home_posts_user.xml" value="0.25" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/fragment_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/fragment_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/item_my_post.xml" value="0.25" />
+        <entry key="..\:/Users/joaop/AndroidStudioProjects/android-firebase-database-example/app/src/main/res/layout/item_user_posts.xml" value="0.25" />
       </map>
     </option>
   </component>
